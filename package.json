@@ -1,0 +1,51 @@
+{
+  "name": "cobrowse-agent-sdk",
+  "browserslist": "> 0.25%, not dead, IE 11",
+  "version": "0.0.3",
+  "description": "Cobrowse.io Agent SDK",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "rm -rf ./dist && babel src --out-dir dist",
+    "start": "babel src --out-dir dist --watch",
+    "test": "npm run build && karma start karma.conf.js",
+    "prepare": "npm run build",
+    "lint": "eslint --ext .js src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cobrowseio/cobrowse-agent-sdk"
+  },
+  "author": "Andy Pritchard",
+  "bugs": {
+    "url": "https://github.com/cobrowseio/cobrowse-agent-sdk/issues"
+  },
+  "homepage": "https://cobrowse.io",
+  "devDependencies": {
+    "@babel/cli": "^7.12.8",
+    "@babel/core": "^7.12.9",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/preset-env": "^7.12.7",
+    "@babel/register": "^7.12.1",
+    "babel-eslint": "^10.1.0",
+    "browserify": "^17.0.0",
+    "eslint": "^7.14.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "karma": "^5.2.3",
+    "karma-browserify": "^7.0.0",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-mocha": "^2.0.1",
+    "mocha": "^8.2.1",
+    "should": "^13.2.3"
+  },
+  "dependencies": {
+    "@arduino/cbor-js": "github:cobrowseio/cbor-js",
+    "babelify": "^10.0.0",
+    "core-js": "^3.8.0",
+    "debug": "^4.3.1",
+    "events": "^3.2.0",
+    "lodash": "^4.17.20",
+    "qs": "^6.9.4"
+  }
+}
